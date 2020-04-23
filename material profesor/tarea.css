@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Rejilla contenedora*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 8em;
+  grid-row-gap: 6em;
+}
+
+/* Corazón css */
+
+.corazon {
+  background-color: red;
+  width: 2.5em;
+  height: 2.5em;
+  position: relative;
+
+  /* Animation 
+  animation-name: latido; 
+  animation-timing-function: ;
+  animation-iteration-count: ;
+  animation-duration:;
+  animation-direction: ;
+  */
+}
+
+.corazon:before,
+.corazon:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.corazon:before {
+  top: -50%;
+  left: 0;
+}
+
+.corazon:after {
+  left: 50%;
+  top: 0;
+}
+
+@keyframes latido {
+  0% {
+    /* */
+  }
+  50% {
+    /* */
+  }
+  100% {
+    /* */
+  }
+}
+
+/* Cuadrado saltarín */
+
+.cuadrado {
+  width: 3em;
+  height: 3em;
+  background-color: navy;
+  border-radius: 10px;
+
+  /*
+  animation-name: ; 
+  animation-timing-function: ;
+  animation-iteration-count: ;
+  animation-duration: ;
+  animation-direction: ;
+  animation-fill-mode: ;
+  */
+}
+
+@keyframes salto {
+  0% {
+    /*
+    transform: ; 
+    box-shadow: ;
+    */
+  }
+  100% {
+    bottom: 50px;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Cuadrado -> círculo */
+
+.circulo {
+  background: radial-gradient(
+    circle at center center,
+    teal 10%,
+    skyblue 20%,
+    teal 30%,
+    skyblue 40%,
+    teal 50%,
+    skyblue 60%,
+    teal 70%,
+    skyblue 80%,
+    white 100%
+  );
+  width: 4em;
+  height: 4em;
+  border: 1px solid red;
+
+  /*
+  animation-name: zaldikomaldiko; 
+  animation-timing-function: ;
+  animation-iteration-count: ;
+  animation-duration: ;
+  animation-direction: ;
+  */
+}
+
+.circulo:before {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  border-radius: 100%;
+
+  /*
+  transform-origin: ;
+  transform: ;
+  */
+}
+
+@keyframes zaldikomaldiko {
+  0% {
+    /* */
+  }
+  95% {
+    /*
+    border-radius: ;
+    */
+  }
+  100% {
+    /*
+    border-radius: 
+    transform:
+    */
+  }
+}
+
+.delay {
+  /* */
+}
+
+/* Cuadrados 3D */
+
+.escena3d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3em;
+  height: 3em;
+  position: relative;
+
+  /*
+  perspective: 
+  */
+}
+
+.objeto {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  /*
+  transform-style:
+  animation: 
+  perspective-origin:
+  */
+}
+
+.cara {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 10% 15%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.anverso {
+  background-color: teal;
+  transform: translateZ(4em);
+}
+
+.reverso {
+  background-color: orange;
+  transform: translateZ(-4em) rotateY(180deg);
+}
+
+@keyframes balanceo {
+  0% {
+    /* */
+  }
+
+  40%,
+  50% {
+    /* */
+  }
+
+  90%,
+  100% {
+    /* */
+  }
+}
+
+/* moneda giratoria */
+
+.moneda {
+  width: 4em;
+  height: 4em;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/67/Golden_Medal_-1_Icon.svg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+
+  /*
+  animation:
+  perspective-origin:
+  */
+}
+
+@keyframes moneda {
+  100% {
+    /* transform: */
+  }
+}
